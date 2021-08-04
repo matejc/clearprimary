@@ -19,7 +19,7 @@ void handle_owner_change(GtkClipboard *clipboard,
     char* text = gtk_clipboard_wait_for_text(clipboard);
     if(text)
     {
-        gtk_clipboard_set_text(clipboard, "", -1);
+        gtk_clipboard_clear(clipboard);
     }
 }
 
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
     // GDK_SELECTION_SECONDARY.
     GtkClipboard* clipboard = gtk_clipboard_get(GDK_SELECTION_PRIMARY);
 
-    gtk_clipboard_set_text(clipboard, "", -1);
+    gtk_clipboard_clear(clipboard);
 
     // Connect to the "owner-change" signal which means that ownership
     // of the X clipboard has changed.

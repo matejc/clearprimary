@@ -50,3 +50,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Project specific
+/clearprimary
+/compile_commands.json
+.ccls-cache/
