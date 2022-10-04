@@ -6,7 +6,7 @@ in
 stdenv.mkDerivation {
   name = "clearprimary";
   src = ./.;
-  buildInputs = [ coreutils gcc glib.dev gtk3.dev atk.dev pkgconfig ];
+  buildInputs = [ coreutils gcc glib.dev gtk3.dev atk.dev pkg-config ];
   buildPhase = ''
     ${buildCmd}
   '';
